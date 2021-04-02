@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activity.TaskActivity">
+
+        <EditText
+            android:id="@+id/editTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:hint="Enter Task Title"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="@dimen/_15ssp"/>
+
+        <com.xw.repo.BubbleSeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:bsb_bubble_color="@color/colorPrimary"
+            app:bsb_bubble_text_color="@color/white"
+            app:bsb_hide_bubble="true"
+            app:bsb_max="5"
+            app:bsb_min="1"
+            app:bsb_progress="1"
+            app:bsb_seek_step_section="true"
+            app:bsb_touch_to_seek="true"
+            android:layout_marginTop="@dimen/_70sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/editTitle"
+            app:bsb_second_track_color="@color/colorPrimary"
+            app:bsb_section_count="4"
+            app:bsb_show_thumb_text="true"
+            app:bsb_section_text_position="bottom_sides"
+            app:bsb_show_section_mark="true"
+            app:bsb_always_show_bubble="true"
+            app:bsb_track_color="@color/gray"/>
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SAVE"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            android:textSize="@dimen/_15ssp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/seekBar"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
